@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: CDLevyt
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Nalle
+Implementation-Vendor-Id: CDLevytFINAL.NalleFyrqvist
+Build-Jdk: 1.8.0_202
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/CDLevyt
+Created-By: Maven Integration for Eclipse
+

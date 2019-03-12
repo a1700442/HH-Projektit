@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>CD-levylistaus</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+<h1>CD-levyt</h1>
+    <table>
+		<tr>
+			<th>Levyn tunnus</th>
+		    <th>Artisti</th>
+		    <th>Albumi</th>
+		    <th>Biisien lukumäärä</th>
+		    <th>Julkaisuvuosi</th>
+		    <th>Tyylilaji</th>
+		</tr>  
+    	<tr th:each = "CDLevyt : ${cdlevylista}">
+    		<td th:text="${CDLevyt.Levy_id}"></td>
+    		<td th:text="${CDLevyt.Artisti}"></td>
+    		<td th:text="${CDLevyt.Albumi}"></td>
+    		<td th:text="${CDLevyt.BiisiLkm}"></td>
+    		<td th:text="${CDLevyt.Julkaisuvuosi}"></td>
+    		<td th:text="${CDLevyt.Tyylilaji}"></td>
+    		<td><a th:href="@{/edit/{id}(id=${CDLevyt.Levy_id})}" class="btn btn-primary btn-xs">Muokkaa CD-levyä</a></td>
+ 			<td><a th:href="@{/delete/{id}(id=${CDLevyt.Levy_id})}" class="btn btn-danger btn-xs">Poista CD-levy</a></td>    		
+    	</tr>
+     </table>
+	 <a href="/lisaalevy" class="btn btn-success">Lisää CD-levy</a>    	
+</body>
+</html>

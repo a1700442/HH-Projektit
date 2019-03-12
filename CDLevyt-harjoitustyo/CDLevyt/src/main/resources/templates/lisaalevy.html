@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CD-levyn lisäys</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<h1>Lisää CD-levy järjestelmään</h1>
+	<div>
+		<form th:object="${CDLevyt}" th:action="@{save}" action="#" method="post">
+		  	<label for="art">Artisti</label>
+			<input type="text" id="art" th:field="*{Artisti}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="alb">Albumi</label>
+			<input type="text" id="alb" th:field="*{Albumi}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="lkm">Biisien lukumäärä</label>
+			<input type="text" id="lkm" th:field="*{BiisiLkm}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="vuo">Julkaisuvuosi</label>
+			<input type="text" id="vuo" th:field="*{Julkaisuvuosi}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="tyy">Tyylilaji</label>
+			<input type="text" id="tyy" th:field="*{Tyylilaji}" />
+			
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" class="btn btn-success" value="Lisää CD-levy"></input>
+		</form>
+	</div>
+</body>
+</html>
